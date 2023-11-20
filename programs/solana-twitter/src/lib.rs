@@ -17,11 +17,11 @@ pub mod solana_twitter {
         }
 
         if content.chars().count() > 280 {
-            return Err(ErrorCode::ContentTooLong.into())
+            return Err(error!(ErrorCode::ContentTooLong));
         }
 
         tweet.author = *author.key;
-        tweet.timestamp = clock.unix.timestamp;
+        tweet.timestamp = clock.unix_timestamp;
         tweet.topic = topic;
         tweet.content = content;
 
@@ -70,6 +70,6 @@ impl Tweet {
 pub enum ErrorCode {
     #[msg("The provided topic should be 50 characters long maximum.")]
     TopicTooLong,
-    #[msg("The provided content should be 280 characters long maximum")]
+    #[msg("The provided content should be 280 characters long maximum.")]
     ContentTooLong,
 }
