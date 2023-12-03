@@ -15,7 +15,7 @@ This Solana-based Twitter-like application leverages the Anchor framework and Ru
 
 - **Solana Wallet:** Users need a Solana-compatible wallet to interact with the app.
 - **Solana CLI:** For development and deployment purposes.
-- **Test Sol:** run "solana airdrop 1000 <your address>"
+- **Test Sol:** run "solana airdrop 1000 Your_address"
 
 ### Usage
 
